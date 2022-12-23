@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { osmosis } from '../codegen/';
 import md5 from "md5";
+import { Center } from "@chakra-ui/react";
 
 export default function Home() {
     const [height, setHeight] = useState(0);
@@ -46,14 +47,27 @@ export default function Home() {
 
   return (
     <>
-      <button style={{ backgroundColor: 'grey', borderColor: 'black' }} onClick={getHeight}>Click to Get Height</button>
-      <p>Height: {height}</p>
 
-      <button style={{ backgroundColor: 'grey', borderColor: 'black' }} onClick={getHash}>Get Hash</button>
-      <p>Hash: {hash}</p>
+      <Center bg='tomato' h='100px' color='white'>
+        <button onClick={getHeight}>Click to Get Height</button>
+      </Center>
 
-      <p>NumPools: {numPools}</p>
-      
+      <Center bg='white' h='100px' color='black'>
+        <p>Height: {height}</p>
+      </Center>
+
+      <Center bg='white' h='100px' color='black'>
+        <p>NumPools: {numPools}</p>
+      </Center>
+
+      <Center bg='tomato' h='100px' color='white'>
+        <button onClick={getHash}>Click to Get Hash</button>
+      </Center>
+
+      <Center h='100px' color='black'>
+        <p>Hash: {hash}</p>
+      </Center>
+
   </>
   );
 }
