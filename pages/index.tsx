@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { osmosis } from '../codegen/';
+import { osmosis } from 'osmojs';
 import md5 from "md5";
 import { Center } from "@chakra-ui/react";
 
